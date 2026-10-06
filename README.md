@@ -21,18 +21,22 @@ W=1Nk=1P(xkxkT)-I
 (Where ‭x‬ is the stored pattern vector, ‭P‬ is the total patterns, and ‭I‬ is the identity matrix)
 
 B. Network Recall & Energy Function
+
 During recall, neurons asynchronously update their states based on the weighted sum of inputs from other neurons.
 
 ‭
 si(t+1)=signjiWijsj(t)
 ‬‭‬‭‬‭‬‭‬‭‬‭‬‭‬‭‬‭‬‭‬‭‬
+
 The network is guaranteed to converge to a local minimum because every state update strictly decreases the network's global energy (Lyapunov function):
 
 ‭
 E=-12ijWijsisj
+
 ‬‭‬‭‬‭‬‭‬‭‬‭‬
 3. Project Relevance
 This implementation goes beyond standard dataset classification by addressing Recurrent Neural Networks (RNNs) and dynamic system stability. The addition of Fuzzy Logic simulates real-world uncertainty (such as faulty factory sensors or noisy transmission channels), elevating the implementation to a robust, hybrid soft computing application suitable for postgraduate evaluation.
+
 
 
 4. How to Run
@@ -40,6 +44,6 @@ This implementation goes beyond standard dataset classification by addressing Re
 pip install numpy matplotlib
 
 # Execute the model
-python3 fuzzy_hopfield_network.py
+fuzzy_hopfield_network.py
 
 This will train the network, pass an image through the fuzzy noise injector, run the Hopfield retrieval, and generate hopfield_fuzzy_result.png showing the visual reconstruction matrix. 
